@@ -25,6 +25,8 @@ export const client = await createConnection();
 //app.use ->interscepts-> applies express.json() ->inbuilt middleware
 app.use(express.json());
 
+app.use(cors())
+
 app.get("/", function (request, response) {
   response.send("🙋‍♂️, 🌏 🎊✨🤩");
 });
