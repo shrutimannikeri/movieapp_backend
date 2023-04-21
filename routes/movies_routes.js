@@ -5,7 +5,7 @@ const router=express.Router()
 
 
 //list of movies
-router.get("/", async function (request, response) {
+router.get("/movies", async function (request, response) {
     //querypart
   
     const qury = request.query;
@@ -34,10 +34,10 @@ router.get("/", async function (request, response) {
   
   router.get("/movies/:id", async function (request, response) {
     const { id } = request.params;
-  
+  console.log(id)
     const mv = await searchMovie(id);
     //find will return perticular one
-  
+  console.log(mv)
     //if nmovie not found we have to set status code 404
     mv
       ? response.send(mv)
