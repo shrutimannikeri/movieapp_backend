@@ -3,6 +3,7 @@ import express from "express"; // "type": "module"
 import { MongoClient } from "mongodb";
 import * as dotenv from "dotenv"; // to import .env file
 import moviesRouter from "./routes/movies_routes.js"
+import cors from 'cors'
 const app = express();
 
 dotenv.config();
